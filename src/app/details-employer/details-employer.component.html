@@ -1,0 +1,21 @@
+<h1 align="center">Détails employer</h1>
+
+<table border="1" align="center" class="table">
+    <tr>
+        <th>Nom</th>
+        <th>Company name</th>
+        <th>Company name catchPhrase</th>
+        <th>Geo Lat</th>
+        <th>Geo Lng</th>
+        <th>Liste Employers</th>
+    </tr>
+    <tr>
+        <td>{{emp.name}}</td>
+        <td>{{emp.company.name}}</td>
+        <td>{{emp.company.catchPhrase}}</td>
+        <td>{{emp.address.geo.lat}}</td>
+        <td>{{emp.address.geo.lng}}</td>
+        <td><a class="btn btn-warning" routerLink="/employer">Retour</a></td>
+    </tr>
+</table>
+

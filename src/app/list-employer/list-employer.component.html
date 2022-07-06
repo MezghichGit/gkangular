@@ -1,0 +1,23 @@
+<h1 align="center">Liste des employers</h1>
+
+<table border="1" align="center" class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Adresse</th>
+        <th>Phone</th>
+        <th>Web site</th>
+    </tr>
+    <tr *ngFor="let emp of employers">
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.username}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.address.street}}</td>
+        <td>{{emp.phone}}</td>
+        <td>{{emp.website}}</td>
+        <td><a [routerLink]="['/detailsEmployer', emp.id]" class="btn btn-warning" t>Plus d'infos</a></td>
+    </tr>
+</table>

@@ -1,0 +1,49 @@
+<img width="20%" [src]="logoGK" />
+<h3 align="center">Compoant contact</h3>
+
+
+<p>Formation : {{ formation }}</p>
+<div [hidden]="isHidden">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi assumenda numquam culpa debitis harum totam, at
+    nostrum animi omnis hic porro magnam quidem deleniti voluptatibus corrupti molestiae et reprehenderit sapiente.
+</div>
+<a (click)="showHide()" class="btn btn-primary">click to Show/Hide</a>
+<p>Centre de formation : {{ lieu }}</p>
+<p>Nombre de candidats : {{ nbreCandidats }}</p>
+
+<h4>Liste des candidats : </h4>
+<ul>
+    <li *ngFor="let nom of noms">{{nom | startsWithDr | uppercase}}</li>
+</ul>
+
+
+<a (click)="info()" class="btn btn-primary" style="margin: 1%;">Cliquer ici</a>
+<a (click)="succes()" class="btn btn-success" style="margin: 1%;">Cliquer ici</a>
+<a class="btn btn-danger" style="margin: 1%;">Cliquer ici</a>
+<a class="btn btn-warning" style="margin: 1%;">Cliquer ici</a>
+<br /><br />
+Votre couleur préféré :<input type="text" [(ngModel)]="maCouleur" />
+
+vous aimez : {{maCouleur}}
+
+<hr>
+<h1>Première méthode avec ngForm</h1>
+<form #calculatrice="ngForm" (ngSubmit)="calcul(calculatrice)">
+    Valeur A : <input type="text" name="v1" ngModel />
+    <br />
+    Valeur B : <input type="text" name="v2" ngModel />
+    <br />
+    <input type="submit" value="Somme"> 
+</form>
+
+<br/>
+La Somme = {{som}}
+
+<hr>
+<h1>Deuxième méthode avec two way data binding</h1>
+
+Valeur A : <input type="number" [(ngModel)]="a" />
+<br />
+Valeur B : <input type="number" [(ngModel)]="b" />
+<br />
+La Somme = {{a+b}}

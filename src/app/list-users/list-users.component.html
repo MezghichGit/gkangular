@@ -1,0 +1,19 @@
+<h1>Liste des Users</h1>
+
+<h4>Détails stagiaires : </h4>
+<table border="1" align="center" class="table">
+    <tr>
+        <th>Nom</th>
+        <th>Email</th>
+        <th>Adresse</th>
+        <th>Téléphone</th>
+        <th>Détails</th>
+    </tr>
+    <tr *ngFor="let stagiaire of stagiaires">
+        <td>{{stagiaire.nom}}</td>
+        <td>{{stagiaire.email}}</td>
+        <td>{{stagiaire.adresse}}</td>
+        <td>{{stagiaire.tel}}</td>
+        <td><a class="btn btn-warning">Plus d'infos</a></td>
+    </tr>
+</table>
